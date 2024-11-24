@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Flexbox Container to divide into 3 parts */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Top Section (Profile Image) */
+        .top-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .top-section img {
+            width: 70%; /* Scales the profile image to fit */
+            height: auto;
+            border-radius: 50%;
+            max-width: 250px; /* Maximum size */
+        }
+
+        /* Middle Section (Logo Image) */
+        .middle-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .middle-section img {
+            width: 60%; /* Scales the logo image to fit */
+            height: auto;
+            max-width: 200px; /* Maximum size */
+        }
+
+        /* Bottom Section (View Movie Data Button) */
+        .bottom-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .view-button {
+            padding: 18px 35px;
+            font-size: 20px;
+            background-color: gold; /* Gold button color */
+            color: #121212;
+            text-decoration: none;
+            border: 2px solid gold;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .view-button:hover {
+            background-color: #ffcc00; /* Slightly darker gold on hover */
+            color: #121212;
+        }
+
+        /* Tablet (Portrait) */
+        @media screen and (max-width: 1024px) {
+            .top-section img {
+                width: 60%;
+                max-width: 200px;
+            }
+
+            .middle-section img {
+                width: 50%;
+                max-width: 180px;
+            }
+
+            .view-button {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+        }
+
+        /* Mobile (Portrait) */
+        @media screen and (max-width: 768px) {
+            .top-section img {
+                width: 50%;
+                max-width: 180px;
+            }
+
+            .middle-section img {
+                width: 40%;
+                max-width: 150px;
+            }
+
+            .view-button {
+                font-size: 16px;
+                padding: 15px 25px;
+            }
+        }
+
+        /* Mobile (Landscape) */
+        @media screen and (max-width: 480px) {
+            .top-section img {
+                width: 40%;
+                max-width: 150px;
+            }
+
+            .middle-section img {
+                width: 35%;
+                max-width: 130px;
+            }
+
+            .view-button {
+                font-size: 14px;
+                padding: 12px 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Section: Profile Image -->
+        <div class="top-section">
+            <img src="profile.png" alt="Profile Image">  <!-- Replace with your profile image -->
+        </div>
+
+        <!-- Middle Section: Logo Image -->
+        <div class="middle-section">
+            <img src="logo.png" alt="Logo">  <!-- Replace with your logo image -->
+        </div>
+
+        <!-- Bottom Section: View Movie Data Button -->
+        <div class="bottom-section">
+            <a href="https://drive.google.com/drive/folders/1xplyKUTsPUZlEMwP0Y9I8mWLfXY4Eltd?usp=sharing" target="_blank" class="view-button">
+                View Movie Data
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
